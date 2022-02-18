@@ -4,6 +4,16 @@
 
 1. 编写一个递归版本的 reverse(s) 函数(或方法),以将字符串s倒置。
 
+//创建一个reverse方法
+public static String reverse （String str）{
+//判断str是否有值
+if（str!=null && str.length<=1）{
+  //获取索引0的数据并创建一个子字符串
+  return reverse（str.subString（1）+str.charAt(0)） 
+}
+return str；
+}
+
 2. 编写程序 expr，以计算从命令行输入的逆波兰表达式的值，其中每个运算符或操作数用一个单独的参数表示。例如，命令
 expr 2 3 4 + *
 
@@ -44,6 +54,29 @@ expr 2 3 4 + *
     "serial": "0004"
   }];
 ```
+function filterName（data，Name）{
+ //创建对象
+ var newData = []
+ //遍历当前json对象
+ for（var i= 0；i=data.length;i++){
+ var ai =data[i];
+ //如果索引为0，则push为新数组，否则过滤字段去重
+ if（i==0）{
+ newData.push（ai）{
+ }else{
+ 
+ var filterName = dest.filter(function(e){
+ return e[Name] = ai[Name];
+ }}
+ if(filterName==0){
+ newData.push(ai)
+ }
+ }
+ }
+ return newData
+}
+
+
 
 5. 把下面给出的扁平化json数据用递归的方式改写成组织树的形式
 
